@@ -1,0 +1,102 @@
+/* style general des rectangles */
+.row {
+    border: 2px solid #d9d9d9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.col-md-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.border-end {
+    border-right: 2px solid #d9d9d9;
+}
+
+form {
+    width: 100%;
+}
+
+.img-fluid {
+    max-width: 90%; /* Réduit la largeur maximale de l'image à 90% de son conteneur */
+  max-height: 300px; /* Définit une hauteur maximale pour l'image */
+  object-fit: cover; /* Conserve le ratio de l'image */
+  margin: auto; /* Centre l'image horizontalement */
+  display: block; /* Assure que l'image est un bloc centré */
+}
+
+/*bouton d'inscription */
+.btn-custom {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 2px solid #ff0000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #fff;
+    color: #ff0000;
+}
+
+/* Responsivité */
+@media (max-width: 991.98px) {
+    /* Adaptation pour les tablettes */
+    .row {
+      flex-direction: column; /* Passe en colonne */
+    }
+  
+    .col-md-6 {
+      width: 100%; /* Chaque section prend 100% de la largeur */
+      border-right: none; /* Supprime la bordure droite */
+      border-bottom: 2px solid #d9d9d9; /* Ajoute une bordure en bas */
+    }
+  
+    .border-end {
+      border-bottom: 2px solid #d9d9d9; /* Remplace la bordure droite par une bordure inférieure */
+    }
+
+    .img-fluid {
+              max-width: 100%; /* L'image occupe toute la largeur du conteneur sur mobile */
+              max-height: 200px; /* Réduit davantage la hauteur maximale sur les petits écrans */
+    }
+    
+    @media (max-width: 767.98px) {
+      /* Adaptation pour les téléphones */
+      .row {
+        margin: 0; /* Supprime les marges externes */
+        padding: 0; /* Supprime les paddings */
+      }
+    
+      form {
+        padding: 0 10px; /* Ajoute un léger padding au formulaire */
+      }
+
+      .btn-custom {
+        font-size: 12px; /* Réduit la taille du texte du bouton */
+        padding: 6px 12px; /* Réduit l'espace interne */
+      }
+    
+      h2 {
+        font-size: 1.5rem; /* Réduit la taille des titres */
+      }
+    
+      p {
+        font-size: 0.9rem; /* Réduit la taille des paragraphes */
+      }
+    }
+    
+    @media (max-width: 575.98px) {
+      /* Adaptation pour les petits téléphones */
+      .col-md-6 {
+        padding: 10px; /* Ajoute un léger padding interne */
+      }
+
+      .btn-custom {
+        width: 100%; /* Le bouton prend toute la largeur */
+      }
+    }
