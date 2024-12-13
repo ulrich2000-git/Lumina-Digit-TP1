@@ -1,3 +1,22 @@
+/* Importation de la police Google Fonts (par exemple, Roboto) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Style global pour unifier la police */
+body {
+  font-family: 'Roboto', Arial, sans-serif; /* Définir une police principale */
+  font-size: 16px; /* Taille de texte par défaut */
+  line-height: 1.6; /* Hauteur de ligne */
+  color: #333; /* Couleur par défaut du texte */
+}
+
+h1{
+  font-weight: 700; /* Met le titre en gras */
+  font-size: 2rem; /* Taille de la police */
+  text-align: center; /* Centrer le texte */
+  color: #000; /* Couleur du titre */
+}
+
+
 /* style general des rectangles */
 .row {
     border: 2px solid #d9d9d9;
@@ -6,14 +25,24 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.col-md-6 {
+/* Augmente la hauteur des rectangles */
+.row.g-0.border.rounded.shadow {
+  height: 600px; /* Ajustez la hauteur à votre besoin */
+
+.col-md-7 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.col-md-5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .border-end {
-    border-right: 2px solid #d9d9d9;
+  border-right: 20px solid #000;
 }
 
 form {
@@ -21,11 +50,34 @@ form {
 }
 
 .img-fluid {
-    max-width: 90%; /* Réduit la largeur maximale de l'image à 90% de son conteneur */
-  max-height: 300px; /* Définit une hauteur maximale pour l'image */
+    max-width: 100%; /* Réduit la largeur maximale de l'image à 90% de son conteneur */
+  max-height: 600px; /* Définit une hauteur maximale pour l'image */
   object-fit: cover; /* Conserve le ratio de l'image */
   margin: auto; /* Centre l'image horizontalement */
   display: block; /* Assure que l'image est un bloc centré */
+  width: 100%; /* L'image occupe toute la largeur du conteneur */
+  height: 100%; /* L'image occupe toute la hauteur du conteneur */
+}
+
+.container {
+  margin-top: 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.description {
+  margin-bottom: 30px;
+  font-weight: 400; /* Police normale pour la description */
+  font-size: 1rem; /* Taille de la police */
+  text-align: center; /* Centrer le texte */
+  color: #6c757d; /* Couleur gris clair */
+}
+
+.form-container {
+  margin-top: 20px;
+  padding: 20px;
 }
 
 /*bouton d'inscription */
@@ -36,6 +88,8 @@ form {
     border-radius: 50px;
     border: 2px solid #ff0000;
     transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    max-width: 100%;
 }
 
 .btn-custom:hover {
